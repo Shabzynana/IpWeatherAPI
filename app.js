@@ -9,6 +9,7 @@ app.set('trust proxy', true)
 //     res.json({ client_ip: client_ip, 'greeting':  `Hello, ${name}`, name });
 // });
 
+
 app.get('/api/hello', (req, res) => {
     const visitorName = req.query.visitor_name || 'Guest';
     const client_ip = req.ip;
