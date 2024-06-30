@@ -21,7 +21,10 @@ app.get('/api/hello', async (req, res, next) => {
 
 
         // Get location data from IPGeolocation API
-        const response = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}&ip=${client_ip}`);
+        // const response = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}&ip=${client_ip}`);
+        const response = await axios.get(`https://ipapi.co/${client_ip}/json/`);
+        // console.log(response.data);
+
         // const response = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}`);
         const location = response.data;
 
