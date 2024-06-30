@@ -21,8 +21,8 @@ app.get('/api/hello', async (req, res, next) => {
 
 
         // Get location data from IPGeolocation API
-        // const response = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}&ip=${client_ip}`);
-        const response = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}`);
+        const response = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}&ip=${client_ip}`);
+        // const response = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}`);
         const location = response.data;
 
         // Get weather data from OpenWeatherMap API
