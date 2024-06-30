@@ -5,7 +5,7 @@ const app = express();require
 ('dotenv').config();
 
 
-// &ip=${client_ip}
+// 
 app.use(cors());
 app.set('trust proxy', true)
 
@@ -21,7 +21,7 @@ app.get('/api/hello', async (req, res, next) => {
 
 
         // Get location data from IPGeolocation API
-        const response = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}`);
+        const response = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}&ip=${client_ip}`);
         const location = response.data;
 
         // Get weather data from OpenWeatherMap API
