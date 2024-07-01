@@ -9,7 +9,7 @@ const app = express();require
 app.use(cors());
 app.set('trust proxy', true)
 
-const apiKey = process.env.api_Key;
+// const apiKey = process.env.api_Key;
 const weatherApiKey = process.env.weatherApi_Key;
 
 app.get('/api/hello', async (req, res, next) => {
@@ -21,7 +21,6 @@ app.get('/api/hello', async (req, res, next) => {
 
 
         // Get location data from IPGeolocation API
-        // const response = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}&ip=${client_ip}`);
         const response = await axios.get(`https://ipapi.co/${client_ip}/json/`);
         const location = response.data;
 
