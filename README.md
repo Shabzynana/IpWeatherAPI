@@ -1,6 +1,6 @@
 # IpWeatherAPI
 
-IpWeatherAPI is a simple web server deployed on Vercel, providing an API endpoint to greet visitors with their location-based weather information.
+IpWeatherAPI is a simple web server with a single API endpoint that returns a greet message to visitors with their location-based weather information.
 
 ## API Endpoint
 
